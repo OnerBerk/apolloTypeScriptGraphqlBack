@@ -1,3 +1,4 @@
-const book = require('./book.resolver')
+// @ts-ignore
+import userResolver from './user.resolver'
 
-module.exports = {book}
+module.exports = {userResolver}

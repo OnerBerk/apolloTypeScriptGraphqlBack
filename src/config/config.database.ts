@@ -1,15 +1,15 @@
 import mongoose from 'mongoose';
 
 const connectToDb = () => {
-    const dbConnect = process.env.URI;
+    const uri =`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@pygmalink.oy8tj.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`;
     // @ts-ignore
-    mongoose.connect(dbConnect, {
+    mongoose.connect(uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
         useFindAndModify: false,
     }).then(() => {
-        console.log('connected');
+        console.log('connected to mongo db');
     });
 };
 

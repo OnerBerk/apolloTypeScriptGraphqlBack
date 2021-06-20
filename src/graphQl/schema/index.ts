@@ -1,7 +1,5 @@
-const podCast = require("./podCast");
-const typeDefs = require('./typeDefs')
+import {userTypeDefs} from "./user.typeDefs";
 
 module.exports={
-    podCast,
-    typeDefs
+    userTypeDefs
 }
